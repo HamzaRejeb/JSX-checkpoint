@@ -1,32 +1,36 @@
-import react from react
-import './Styles.css'
-import image from /subfolder/imageInSrc.jpg
+import react from "react";
+import user from "./imageInSrc.jpg";
+import "./Styles.css";
 
-
-function App() {
+export default function App() {
   return (
-<div style={{border:"solid 1px black" , maxwidth:"100vw"}}>
+    <div style={{ border: "solid 1px black", maxwidth: "100vw" }}>
+      <h1 className="title red">Your name here</h1>
 
-<h1 className="title red">Your name here</h1>
+      <p>
+        greetings
+        <br />
+        this is my first JSX project
+      </p>
 
-<br>
+      <div className="image-container">
+        <img src={user} alt="imagesrc" />
 
-<img src={"/imageInSrc.jpg"} />
+        <img src="imageInPublic.jpeg" alt="imagePublic" />
+      </div>
 
-</br>
+      <div style={{ width: "320px", height: "240" }}></div>
 
-<img src={"/subfolderPublic/imageInPublic.jpg"} />
-
-
-<video  width="320" height="240" controls>
-
-<source src="myVideo.mp4" type="video/mp4" />
-
-</video>
-
-</div>
-
+      <iframe
+        width="300"
+        height="250"
+        src="https://www.youtube.com/embed/DLX62G4lc44"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
   );
-};
+}
 
 export default App;
